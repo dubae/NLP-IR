@@ -122,6 +122,15 @@ public class Boolean_IR {
                 }
             }
 
+
+            if(trueSet.isEmpty()){
+                File dir = new File("poetry_data");
+                for(File file : dir.listFiles()){
+                    trueSet.add(file.getName());
+                }
+
+            }
+
             for(String s: falseSet){ //falseSet은 NOT 연산이므로 trueSet에서 이를 제거
                 trueSet.remove(s);
             }
@@ -156,13 +165,16 @@ public class Boolean_IR {
             }
 
             trueSet.addAll(falseSet);
+
+
             return trueSet;
         }
 
-        // 2. check "NOT"
 
 
         //return List.of(null);
+
+
 
     }
 

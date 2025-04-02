@@ -12,7 +12,7 @@ public class test {
 
         System.out.println("test 실행");
 
-        포스팅리스트테스트();
+        //포스팅리스트테스트();
 
 
         //parsingTest("snail OR bends OR NOT nectar");

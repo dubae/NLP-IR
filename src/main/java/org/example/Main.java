@@ -12,7 +12,7 @@ public class Main {
         System.out.println("Query form should be like that: [MODE(Boolean/Vector)] [Query]");
         System.out.println("e.g. Boolean love AND NOT worlds");
         System.out.println("e.g. Boolean love OR worlds");
-        System.out.println("e.g. Vector love words");
+        System.out.println("e.g. Vector love worlds");
 
 
         Scanner scanner = new Scanner(System.in);
@@ -25,6 +25,7 @@ public class Main {
             if(query.contains("Boolean")){
                 query = query.replace("Boolean","");
                 Set<String> set=Boolean_IR.getDocByBooleanQuery(query);
+                System.out.println("Number of document: " + set.size());
                 set.forEach(System.out::println);
             }else if(query.contains("Vector")){
                 query = query.replace("Vector","");
