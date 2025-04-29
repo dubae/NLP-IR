@@ -34,8 +34,11 @@ public  class Ranked_IR {
 
 
         // 출력
+        int i=1;
         for (Map.Entry<String, Double> entry : entryList) {
-            System.out.println(entry.getKey() + ": " + entry.getValue());
+            System.out.println("["+i++ +"] " + entry.getKey()
+//                    + ": " + entry.getValue()
+            );
         }
 
 
